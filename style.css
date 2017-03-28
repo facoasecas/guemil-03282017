@@ -1,6 +1,7 @@
 body{
   font-weight: 400;
-  background:rgba(245,245,245,1);
+  background:white;
+  padding-bottom: 3em;
 }
 
 :lang(es){
@@ -12,16 +13,30 @@ body{
 }
 
 article{
-  border:1px solid rgba(100,100,100,1);
-  background:rgba(255,255,255,1);
+  border-top:5px solid silver;
+  background:rgba(250,250,250,1);
   padding:2em 1em 1em 1em;
-  box-shadow: 0 0 5px rgba(200,200,200,0.1);
 }
+
+article.logrado{
+  border-color: hsl(180,30%,60%);
+
+}
+
+article.medianamente-logrado{
+  border-color: hsl(40,100%,70%);
+
+}
+
+article.no-logrado{
+  border-color: hsl(0,90%,70%);
+}
+
 
 article img{
   width:100%;
   height:auto;
-  background:rgba(200,200,200,1);
+  background:rgba(225,225,225,1);
 }
 
 article h1{
