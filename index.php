@@ -36,25 +36,12 @@ y no se puede hacer "copipeist"
 <?php
 $datos = array(
 array("45_Tsunami",82,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/45_Gv05-Tsunami.svg"),
-array("09_Authority_instruction",78,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/09_Gv05-Authority_instruction.svg"),
-array("17_Evacuate_fast",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/17_Gv05-Evacuate_fast.svg"),
-array("44_Volcano_ashes",72,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/44_Gv05b-Volcano_ashes.svg"),
+array("09_Authority_instruction",78,168,95,30,12,27,4,8,"The icon needs to be discarded.", "Este icono debe ser descartado.","http://www.guemil.info/wp-content/uploads/2016/07/09_Gv05-Authority_instruction.svg"),
+array("44_Volcano_ashes",72,168,95,30,12,27,4,8,"The icon needs to be discarded.", "Este icono debe ser descartado.","http://www.guemil.info/wp-content/uploads/2016/07/44_Gv05b-Volcano_ashes.svg"),
+array("17_Evacuate_fast",92,168,95,30,12,27,4,8,"The icon is the foxy lady.", "Este icono está la zorra.","http://www.guemil.info/wp-content/uploads/2016/07/17_Gv05-Evacuate_fast.svg"),
 array("49_Avalanche",88,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/49_Gv05b-Avalanche.svg"),
-array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/48_Gv05-Alluvium.svg"),  
+array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon is the foxy lady.", "Este icono está la zorra.","http://www.guemil.info/wp-content/uploads/2016/07/48_Gv05-Alluvium.svg"),
 );
-  //Los valores en cada array son:
-    //[0] Nombre_del_pictograma, 
-    //[1] Número porcentaje de desempeño, 
-    //[2] Número total respuestas, 
-    //[3] Número total correctas,
-    //[4] Número total casi correctas,
-    //[5] Número total dudosas
-    //[6] Número total incorrectas
-    //[7] Número total opuestas
-    //[8] Número total respuesta
-    //[9] Action (phrase)
-    //[10] Acción (frase)
-    //[11] URL de la imagen svg
 ?>
 
 <!--ahora comienzo con la cuestión, podrás notar que uso Bootstrap para simplificarme la vida-->
@@ -63,10 +50,13 @@ array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "
 <div class="row">
 
   <?php for ($i = 0; $i < $veces = count($datos); $i++) {?>
-  
   <!--comienza la tarjeta-->
   <div class="col-sm-6 col-md-4 suple">
-  <article>
+  <article class="<?php
+  if($datos[$i][1] <= 80){echo('no-logrado');}
+  elseif($datos[$i][1] > 80 && $datos[$i][1] <= 90){echo('medianamente-logrado');}
+  else{echo('logrado');};
+  ?>">
     <header class="row">
     <div class="col-xs-6"><img src="<?php echo($datos[$i][11]);?>" /></div>
     <div class="col-xs-6"><h1><?php echo($datos[$i][1]);?><span class="porcentaje">%</span></h1><p>Performance <span lang="es">Desempeño</es></p></div>
@@ -79,7 +69,7 @@ array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "
     <table class="table">
     <tr>
     <td><h4><?php echo($datos[$i][3]);?></h4> <p>Correct<br /><span lang="es">Correcto</span></p></td>
-    <td><h4><?php echo($datos[$i][4]);?></h4> <p>Almos correct<br /><span lang="es">Casi correcto</span></p></td>
+    <td><h4><?php echo($datos[$i][4]);?></h4> <p>Almost correct<br /><span lang="es">Casi correcto</span></p></td>
     <td><h4><?php echo($datos[$i][5]);?></h4> <p>Doubtful<br /><span lang="es">Dudoso</span></p></td>
     </tr>
     <tr>
