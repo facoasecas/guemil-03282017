@@ -40,8 +40,21 @@ array("09_Authority_instruction",78,168,95,30,12,27,4,8,"The icon needs to be re
 array("17_Evacuate_fast",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/17_Gv05-Evacuate_fast.svg"),
 array("44_Volcano_ashes",72,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/44_Gv05b-Volcano_ashes.svg"),
 array("49_Avalanche",88,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/49_Gv05b-Avalanche.svg"),
-array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/48_Gv05-Alluvium.svg"),
+array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/48_Gv05-Alluvium.svg"),  
 );
+  //Los valores en cada array son:
+    //[0] Nombre_del_pictograma, 
+    //[1] Número porcentaje de desempeño, 
+    //[2] Número total respuestas, 
+    //[3] Número total correctas,
+    //[4] Número total casi correctas,
+    //[5] Número total dudosas
+    //[6] Número total incorrectas
+    //[7] Número total opuestas
+    //[8] Número total respuesta
+    //[9] Action (phrase)
+    //[10] Acción (frase)
+    //[11] URL de la imagen svg
 ?>
 
 <!--ahora comienzo con la cuestión, podrás notar que uso Bootstrap para simplificarme la vida-->
