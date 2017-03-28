@@ -63,12 +63,13 @@ array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "
 <div class="row">
 
   <?php for ($i = 0; $i < $veces = count($datos); $i++) {?>
+  
   <!--comienza la tarjeta-->
   <div class="col-sm-6 col-md-4 suple">
   <article>
     <header class="row">
     <div class="col-xs-6"><img src="<?php echo($datos[$i][11]);?>" /></div>
-    <div class="col-xs-6"><h1 style="<?php echo($estilo);?>"><?php echo($datos[$i][1]);?><span class="porcentaje">%</span></h1><p>Performance <span lang="es">Desempeño</es></p></div>
+    <div class="col-xs-6"><h1><?php echo($datos[$i][1]);?><span class="porcentaje">%</span></h1><p>Performance <span lang="es">Desempeño</es></p></div>
     <div class="col-xs-12"><h2><?php echo($datos[$i][0]);?></h2></div>
     </header>
     <section>
