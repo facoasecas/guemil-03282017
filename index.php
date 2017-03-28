@@ -18,8 +18,8 @@
 
 <!--
 OJO:
-En lo que sigue voy a escribir algunas variables en PHP,
-son unos array que simulan filas de datos en Excel.
+En lo que sigue voy a escribir un array multidimensional en PHP,
+lo hago para simular un documento Excel con 5 filas.
 Luego podrás ver que llamo a cada dato según el lugar que ocupa en el array,
 lo que podría ser muy parecido a llamar al valor de cada celda de fila
 
@@ -34,121 +34,59 @@ y no se puede hacer "copipeist"
 -->
 
 <?php
-$primera=array("45_Tsunami",82,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/45_Gv05-Tsunami.svg");
-$segunda=array("09_Authority_instruction",78,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/09_Gv05-Authority_instruction.svg");
-$tercera=array("17_Evacuate_fast",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/17_Gv05-Evacuate_fast.svg");
+$datos = array(
+array("45_Tsunami",82,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/45_Gv05-Tsunami.svg"),
+array("09_Authority_instruction",78,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/09_Gv05-Authority_instruction.svg"),
+array("17_Evacuate_fast",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/17_Gv05-Evacuate_fast.svg"),
+array("44_Volcano_ashes",72,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/44_Gv05b-Volcano_ashes.svg"),
+array("49_Avalanche",88,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/49_Gv05b-Avalanche.svg"),
+array("48_Alluvium",92,168,95,30,12,27,4,8,"The icon needs to be redesigned.", "Este icono requiere ser diseñado.","http://www.guemil.info/wp-content/uploads/2016/07/48_Gv05-Alluvium.svg"),
+);
 ?>
 
-    <div class="container">
-      <div class="row">
+<!--ahora comienzo con la cuestión, podrás notar que uso Bootstrap para simplificarme la vida-->
 
-        <!--comienza la primera tarjeta-->
-        <div class="col-sm-6 col-md-4 suple">
-          <article>
-            <header class="row">
-            <div class="col-xs-6"><img src="<?php echo($primera[11]);?>" /></div>
-            <div class="col-xs-6"><h1 style="<?php echo($estilo);?>"><?php echo($primera[1]);?><span class="porcentaje">%</span></h1><p>Performance <span lang="es">Desempeño</es></p></div>
-            <div class="col-xs-12"><h2><?php echo($primera[0]);?></h2></div>
-            </header>
-            <section>
-            <h3>Meaning <span lang="es">Significado</span> <span class="pull-right"><a role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample"><?php echo($primera[2]);?></a> Answers <span lang="es">Respuestas</span></span></h3>
-            <div class="collapse" id="collapseExample1">
-              <div class="table-responsive">
-                <table class="table">
-                <tr>
-                  <td><h4><?php echo($primera[3]);?></h4> <p>Correct<br /><span lang="es">Correcto</span></p></td>
-                  <td><h4><?php echo($primera[4]);?></h4> <p>Almos correct<br /><span lang="es">Casi correcto</span></p></td>
-                  <td><h4><?php echo($primera[5]);?></h4> <p>Doubtful<br /><span lang="es">Dudoso</span></p></td>
-                </tr>
-                <tr>
-                  <td><h4><?php echo($primera[6]);?></h4> <p>Incorrecto<br /><span lang="es">incorrecto</span></p></td>
-                  <td><h4><?php echo($primera[7]);?></h4> <p>Opposite<br /><span lang="es">opuesto</span></p></td>
-                  <td><h4><?php echo($primera[8]);?></h4> <p>No answer<br /><span lang="es">Sin respuesta</span></p></td>
-                </tr>
-              </table>
-            </div>
-          </div><!--collapse-->
-            </section>
-            <footer>
-              <h3>Action <span lang="es">Acción</span></h3>
-              <p><?php echo($primera[9]);?></p>
-              <p lang="es"><?php echo($primera[10]);?></p>
-            </footer>
-          </article>
-        </div>
-        <!--termina tarjeta-->
+<div class="container">
+<div class="row">
 
-        <!--comienza la segunda tarjeta-->
-        <div class="col-sm-6 col-md-4 suple">
-          <article>
-            <header class="row">
-            <div class="col-xs-6"><img src="<?php echo($segunda[11]);?>" /></div>
-            <div class="col-xs-6"><h1><?php echo($segunda[1]);?><span class="porcentaje">%</span></h1><p>Performance <span lang="es">Desempeño</es></p></div>
-            <div class="col-xs-12"><h2><?php echo($segunda[0]);?></h2></div>
-            </header>
-            <section>
-            <h3>Meaning <span lang="es">Significado</span> <span class="pull-right"><a role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample"><?php echo($segunda[2]);?></a> Answers <span lang="es">Respuestas</span></span></h3>
-            <div class="collapse" id="collapseExample2">
-              <div class="table-responsive">
-                <table class="table">
-                <tr>
-                  <td><h4><?php echo($segunda[3]);?></h4> <p>Correct<br /><span lang="es">Correcto</span></p></td>
-                  <td><h4><?php echo($segunda[4]);?></h4> <p>Almos correct<br /><span lang="es">Casi correcto</span></p></td>
-                  <td><h4><?php echo($segunda[5]);?></h4> <p>Doubtful<br /><span lang="es">Dudoso</span></p></td>
-                </tr>
-                <tr>
-                  <td><h4><?php echo($segunda[6]);?></h4> <p>Incorrecto<br /><span lang="es">incorrecto</span></p></td>
-                  <td><h4><?php echo($segunda[7]);?></h4> <p>Opposite<br /><span lang="es">opuesto</span></p></td>
-                  <td><h4><?php echo($segunda[8]);?></h4> <p>No answer<br /><span lang="es">Sin respuesta</span></p></td>
-                </tr>
-              </table>
-            </div>
-          </div><!--collapse-->
-            </section>
-            <footer>
-              <h3>Action <span lang="es">Acción</span></h3>
-              <p><?php echo($segunda[9]);?></p>
-              <p lang="es"><?php echo($segunda[10]);?></p>
-            </footer>
-          </article>
-        </div>
-        <!--termina tarjeta-->
+  <?php for ($i = 0; $i < $veces = count($datos); $i++) {?>
+  <!--comienza la tarjeta-->
+  <div class="col-sm-6 col-md-4 suple">
+  <article>
+    <header class="row">
+    <div class="col-xs-6"><img src="<?php echo($datos[$i][11]);?>" /></div>
+    <div class="col-xs-6"><h1 style="<?php echo($estilo);?>"><?php echo($datos[$i][1]);?><span class="porcentaje">%</span></h1><p>Performance <span lang="es">Desempeño</es></p></div>
+    <div class="col-xs-12"><h2><?php echo($datos[$i][0]);?></h2></div>
+    </header>
+    <section>
+    <h3>Meaning <span lang="es">Significado</span> <span class="pull-right"><a role="button" data-toggle="collapse" href="#collapseExample<?php echo($i+1);?>" aria-expanded="false" aria-controls="collapseExample"><?php echo($datos[$i][2]);?></a> Answers <span lang="es">Respuestas</span></span></h3>
+    <div class="collapse" id="collapseExample<?php echo($i+1);?>">
+    <div class="table-responsive">
+    <table class="table">
+    <tr>
+    <td><h4><?php echo($datos[$i][3]);?></h4> <p>Correct<br /><span lang="es">Correcto</span></p></td>
+    <td><h4><?php echo($datos[$i][4]);?></h4> <p>Almos correct<br /><span lang="es">Casi correcto</span></p></td>
+    <td><h4><?php echo($datos[$i][5]);?></h4> <p>Doubtful<br /><span lang="es">Dudoso</span></p></td>
+    </tr>
+    <tr>
+    <td><h4><?php echo($datos[$i][6]);?></h4> <p>Incorrecto<br /><span lang="es">incorrecto</span></p></td>
+    <td><h4><?php echo($datos[$i][7]);?></h4> <p>Opposite<br /><span lang="es">opuesto</span></p></td>
+    <td><h4><?php echo($datos[$i][8]);?></h4> <p>No answer<br /><span lang="es">Sin respuesta</span></p></td>
+    </tr>
+    </table>
+    </div>
+    </div><!--collapse-->
+    </section>
+    <footer>
+    <h3>Action <span lang="es">Acción</span></h3>
+    <p><?php echo($datos[$i][9]);?></p>
+    <p lang="es"><?php echo($datos[$i][10]);?></p>
+    </footer>
+  </article>
+  </div>
+  <!--termina tarjeta-->
 
-        <!--comienza la tercera tarjeta-->
-        <div class="col-sm-6 col-md-4 suple">
-          <article>
-            <header class="row">
-            <div class="col-xs-6"><img src="<?php echo($tercera[11]);?>" /></div>
-            <div class="col-xs-6"><h1><?php echo($tercera[1]);?><span class="porcentaje">%</span></h1><p>Performance <span lang="es">Desempeño</es></p></div>
-            <div class="col-xs-12"><h2><?php echo($tercera[0]);?></h2></div>
-            </header>
-            <section>
-            <h3>Meaning <span lang="es">Significado</span> <span class="pull-right"><a role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample"><?php echo($tercera[2]);?></a> Answers <span lang="es">Respuestas</span></span></h3>
-            <div class="collapse" id="collapseExample3">
-              <div class="table-responsive">
-                <table class="table">
-                <tr>
-                  <td><h4><?php echo($tercera[3]);?></h4> <p>Correct<br /><span lang="es">Correcto</span></p></td>
-                  <td><h4><?php echo($tercera[4]);?></h4> <p>Almos correct<br /><span lang="es">Casi correcto</span></p></td>
-                  <td><h4><?php echo($tercera[5]);?></h4> <p>Doubtful<br /><span lang="es">Dudoso</span></p></td>
-                </tr>
-                <tr>
-                  <td><h4><?php echo($tercera[6]);?></h4> <p>Incorrecto<br /><span lang="es">incorrecto</span></p></td>
-                  <td><h4><?php echo($tercera[7]);?></h4> <p>Opposite<br /><span lang="es">opuesto</span></p></td>
-                  <td><h4><?php echo($tercera[8]);?></h4> <p>No answer<br /><span lang="es">Sin respuesta</span></p></td>
-                </tr>
-              </table>
-            </div>
-          </div><!--collapse-->
-            </section>
-            <footer>
-              <h3>Action <span lang="es">Acción</span></h3>
-              <p><?php echo($tercera[9]);?></p>
-              <p lang="es"><?php echo($tercera[10]);?></p>
-            </footer>
-          </article>
-        </div>
-        <!--termina tarjeta-->
+<?php };?>
 
 </div><!--row-->
 </div><!--container-->
